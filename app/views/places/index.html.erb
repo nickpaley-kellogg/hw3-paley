@@ -1,0 +1,9 @@
+<h1>Places Nick Has Visited</h1>
+
+<ul>
+  <% for place in @places %>
+    <li><%= link_to place.name, place %></li>
+  <% end %>
+  
+</ul>
+<%= link_to 'Add a New Place', new_place_path %>
