@@ -14,3 +14,10 @@ class EntriesController < ApplicationController
     end
   end
 end
+
+
+
+
+  def entry_params
+    params.require(:entry).permit(:title, :description, :posted_on)
+  end

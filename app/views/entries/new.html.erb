@@ -1,0 +1,14 @@
+<h1>Add a New Entry for <%= @place.name %></h1>
+
+<%= form_with(model: [@place, @entry], local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :posted_on %>
+  <%= form.date_select :posted_on %>
+
+  <%= form.submit 'Create Entry' %>
+<% end %>
